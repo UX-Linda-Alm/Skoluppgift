@@ -1,0 +1,161 @@
+/* PRESIDENCY: koden läses från toppen, men en klass bestämmer mer än vad en tagg gör.  */
+
+/* Dokumentera tydligt vad sektionerna gör så att andra kan läsa och förstå. 
+ROOT kontrollerar värden som kan liknas vid Variabler i Figma.*/
+
+:root {
+    --color-purple: #6D035F;
+    --color-background: #dfdfdf;
+    --color-box: rgba(255, 255, 255, 0.4);
+    --color-text: #000;
+
+    --font-heading: "Josefin Sans", sans-serif;
+    --font-paragraph: "Lexend", sans-serif;
+    --font-link: "Open sans", sans-serif;
+    /*Jag har även laddat ned länken till Open sans om jag vill testa med annan stil.*/
+    
+    --max-width: 1220px;
+    --spacing-sm: 12px;
+    --spacing-md: 24px;
+    --spacing-lg: 32px;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: var(--color-background);
+    width: auto;
+    max-width: var(--max-width);
+    padding: 0 90px 0 90px;
+    display: flex; /* Så att sektionen blir utfallande */
+    flex-direction: column; /*Så innehållet ligger i EN kolumn, undr varandra. */
+    justify-content: space-evenly;
+    height: fit-content; /* Så att sektionen väwer på höjden om innehållet utökas */
+}
+
+h1 {
+    text-align: center;
+    font-family: var(--font-heading);
+    color: var(--color-text);
+    font-size: 1.5rem; /*Definiera inte i pixlar uten i en relativ enhet, det ger responsibilitet. (1 rem kan vara ungefär 16 pixlar)  */
+    font-weight: 700; /*Undvik att anbända BOLD osv, utgå ifrån 100 som tunnast och 900 som tjockaste för att koden ska fungera även när man byter typsnitt.*/
+    line-height: normal; /* Här kan man även skriva en procentsats eller ett decimaltal.  */
+    margin: auto; /* Om man skriver ett värde gäller det alla sidor, skriver man två gäller det över/under samt sidorna, skeiver man fyra värden räknas det vänster, över, höger, under. */
+}
+
+h2 {
+    text-align: center;
+    font-family: var(--font-heading);
+    color: var(--color-purple);
+    font-size: 1rem; /*Definiera inte i pixlar uten i en relativ enhet, det ger responsibilitet. (1 rem kan vara ungefär 16 pixlar)  */
+    font-weight: 600; /*Undvik att anbända BOLD osv utgå ifrån 100 som tunnast och 900 som tjockaste för att koden ska fungera även när man byter typsnitt.*/
+    line-height: 1.2; /* Här kan man skriva en procentsats eller ett decimaltal.  */
+    margin: auto; /* Om man skriver ett värde gäller det alla sidor, skriver man två gäller det över/under samt sidorna, skeiver man fyra värden räknas det vänster, över, höger, under. */
+}
+
+p {
+    font-family:  var(--font-heading);
+    font-size: 0.75rem;
+    line-height: 1.0;
+    text-align: center;
+    margin: auto; 
+}
+
+
+
+section {
+    display: flex; /* Så att sektionen blir utfallande */
+    flex-direction: column; /*Så innehållet ligger i EN kolumn, undr varandra. */
+    height: fit-content; /* Så att sektionen väwer på höjden om innehållet utökas */
+    width: 100%; /*auto;*/ /* Så att innehållet fördelas ut på den tillgängliga ytan. */
+    background-color: var(--color-background);
+    margin: var(--spacing-lg) 0;
+}
+
+
+
+header {
+    padding: 16px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    }
+
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Så objekten fördelas ut, med samma avstånd. */
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    gap: 40px;
+}
+
+ul {
+    list-style: disc; /* Punkterna syns, vill man ta bort punkterna väjer man NONE*/
+    margin: 0;
+    padding: 0;
+    display: inline; /* Så att de ligger vertikalt vill man ha dem horisontellt väljs FLEX. */
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    background-color: var(--color-box);
+    margin: 2rem;
+    padding: 2rem;
+    row-gap: 24px;
+}
+
+.columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.rows {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    padding: var(--spacing-sm) 0; 
+}
+
+img.logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-height: 75px;
+    margin-bottom: 0px;
+}
+
+img.still {
+    max-width: 100%;
+}
+
+img {
+    width: 100%;
+    display: flex; /* Så att sektionen blir utfallande */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: var(--spacing-lg);
+}
+
+a {
+    color: var(--color-text);
+    font-family: var(--font-link);
+    font-size: 12px;
+}
+
+
+
