@@ -10,7 +10,7 @@ ROOT kontrollerar värden som kan liknas vid Variabler i Figma.*/
     --color-text: #000;
 
     --font-heading: "Josefin Sans", sans-serif;
-    --font-paragraph: "Lexend", sans-serif;
+    --font-paragraph: "Poppins", static;
     --font-link: "Open sans", sans-serif;
     /*Jag har även laddat ned länken till Open sans om jag vill testa med annan stil.*/
     
@@ -22,6 +22,7 @@ ROOT kontrollerar värden som kan liknas vid Variabler i Figma.*/
 
 *{
     box-sizing: border-box;
+    gap:0px;
 }
 
 
@@ -73,6 +74,7 @@ section {
     width: 100%; /*auto;*/ /* Så att innehållet fördelas ut på den tillgängliga ytan. */
     background-color: var(--color-background);
     margin: var(--spacing-lg) 0;
+    gap: 4px;
 }
 
 
@@ -86,15 +88,26 @@ header {
     align-items: center;
     }
 
+/*nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Så objekten fördelas ut, med samma avstånd. */
+    /*margin: 0;
+    padding: 0;
+    align-items: center;
+    gap: 40px;
+}*/
 
-nav {
+.menu {
+    list-style: none;
+    text-decoration-line: none;
     display: flex;
     flex-direction: row;
     justify-content: space-between; /* Så objekten fördelas ut, med samma avstånd. */
     margin: 0;
     padding: 0;
     align-items: center;
-    gap: 40px;
+    gap: var(--spacing-md);
 }
 
 ul {
@@ -103,7 +116,7 @@ ul {
     padding: 0;
     display: inline; /* Så att de ligger vertikalt vill man ha dem horisontellt väljs FLEX. */
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .box {
@@ -115,19 +128,18 @@ ul {
     background-color: var(--color-box);
     margin: 2rem;
     padding: 2rem;
-    row-gap: 24px;
+    row-gap: var(--spacing-md);
 }
 
 .columns {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+    gap: var(--spacing-sm);
 }
 
 .rows {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
-    padding: var(--spacing-sm) 0; 
 }
 
 img.logo {
@@ -148,7 +160,7 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: var(--spacing-lg);
+    margin: var(--spacing-sm) var(--spacing-lg);
 }
 
 a {
@@ -156,6 +168,5 @@ a {
     font-family: var(--font-link);
     font-size: 12px;
 }
-
 
 

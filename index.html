@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lexend:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -21,13 +22,15 @@
         </section>
         
         <nav>
-            <a href>Typografi</a>
-            <a href>Bild</a>
-            <a href>Listor</a>
-            <a href>Länkar</a>
-            <a href>Kolumner</a>
-            <a href>Rader</a>
-            <a href>Footer</a>
+            <ul class="menu">
+                <a href="#typography">Typografi</a>
+                <a href="#bild">Bild</a>
+                <a href="#list">Listor</a>
+                <a href="#links">Länkar</a>
+                <a href="#columns">Kolumner</a>
+                <a href="#rows">Rader</a>
+                <a href="#footer">Footer</a>
+            </ul>
         </nav>
     </header>
     
@@ -39,10 +42,10 @@
         </section>
 
         
-        <img class="still" src="images/bild-stilleben.jpg" alt="Ett stilleben som föreställer en korg med apelsiner och citroner.">
+        <img id="bild" class="still" src="images/bild-stilleben.jpg" alt="Ett stilleben som föreställer en korg med apelsiner och citroner.">
         
 
-        <section id="lista" class="box">
+        <section id="list" class="box">
             <h2>Rubrik för min lista.</h2>
             <ul>
                 <li>Punkt</li>
@@ -57,16 +60,14 @@
             <a class="email" href="mailto:linda.alm@iths.se">Maila mig!</a>
         </section>
 
-        <section>
-            <div class="columns">
-                <img src="images/k1.jpg" alt="Ett stilleben.">
-                <img src="images/k2.jpg" alt="Ett stilleben till.">
-                <img src="images/k3.jpg" alt="Ytterligare ett stilleben.">
-            </div>
+        <section id="columns" class="columns"> 
+            <img src="images/k1.jpg" alt="Ett stilleben.">
+            <img src="images/k2.jpg" alt="Ett stilleben till.">
+            <img src="images/k3.jpg" alt="Ytterligare ett stilleben.">
         </section>
 
         <section>
-            <div class="rows">
+            <div id="rows" class="rows">
                 <img src="images/r1.jpg" alt="Ett stilleben.">
                 <img src="images/r2.jpg" alt="Ett stilleben till.">
                 <img src="images/r3.jpg" alt="Ytterligare ett stilleben.">
@@ -74,5 +75,11 @@
         </section>
 
     </main>
+    <footer id="footer">
+        <section>
+            <h2>Footer</h2>
+            <img class="logo" src="images/lama-svart.svg" alt="Lama logo i svart.">
+        </section>
+    </footer>
 </body>
 </html>
